@@ -34,7 +34,7 @@ const Login = () => {
 
     return (
         <div className="w-full">
-            <h2 className="text-center text-3xl font-bold text-gray-900 mb-6">
+            <h2 className="text-center text-3xl font-bold text-[#454839] mb-6"> {/* sage-900 */}
                 Log in to your account
             </h2>
             
@@ -42,7 +42,7 @@ const Login = () => {
                 <div>
                     <label 
                         htmlFor="emailOrUsername" 
-                        className="block text-sm font-medium text-gray-700"
+                        className="block text-sm font-medium text-[#616954]" /* sage-800 */
                     >
                         Email or Username
                     </label>
@@ -53,7 +53,7 @@ const Login = () => {
                             type="text"
                             autoComplete="email"
                             required
-                            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                            className="block w-full px-3 py-2 border border-[#d1d7ce] rounded-md shadow-sm focus:outline-none focus:ring-[#B7BDA9] focus:border-[#B7BDA9]" /* sage-300 border, focus:sage-500 */
                             value={emailOrUsername}
                             onChange={(e) => setEmailOrUsername(e.target.value)}
                         />
@@ -63,7 +63,7 @@ const Login = () => {
                 <div>
                     <label 
                         htmlFor="password" 
-                        className="block text-sm font-medium text-gray-700"
+                        className="block text-sm font-medium text-[#616954]" /* sage-800 */
                     >
                         Password
                     </label>
@@ -74,7 +74,7 @@ const Login = () => {
                             type="password"
                             autoComplete="current-password"
                             required
-                            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                            className="block w-full px-3 py-2 border border-[#d1d7ce] rounded-md shadow-sm focus:outline-none focus:ring-[#B7BDA9] focus:border-[#B7BDA9]" /* sage-300 border, focus:sage-500 */
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         />
@@ -91,16 +91,16 @@ const Login = () => {
                 <div>
                     <button 
                         type="submit"
-                        className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                        className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-semibold text-[#454839] bg-[#B7BDA9] hover:bg-[#9aa48c] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#B7BDA9] transition-colors duration-300" /* sage-500 bg, sage-900 text, hover:sage-600 */
                     >
                         Log In
                     </button>
                 </div>
             </form>
 
-            <p className="mt-6 text-center text-sm text-gray-600">
+            <p className="mt-6 text-center text-sm text-[#616954]"> {/* sage-800 */}
                 Don't have an account?{' '}
-                <Link to="/auth/signup" className="font-medium text-blue-600 hover:text-blue-500">
+                <Link to="/auth/signup" className="font-medium text-[#7d8a70] hover:text-[#454839] transition-colors duration-300"> {/* sage-700, hover:sage-900 */}
                     Sign up here
                 </Link>
             </p>

@@ -90,87 +90,87 @@ const EditProfilePage = () => {
         }
     };
 
-    if (loading) return <div className="max-w-3xl mx-auto py-6 px-4">Loading form...</div>;
+    if (loading) return <div className="max-w-3xl mx-auto text-[#616954]">Loading form...</div>;
 
     return (
-        <div className="max-w-3xl mx-auto py-6 px-4">
-            <h1 className="text-3xl font-bold text-gray-900 mb-6">Edit Profile</h1>
+        <div className="max-w-3xl mx-auto">
+            <h1 className="text-3xl font-bold text-[#454839] mb-6">Edit Profile</h1> 
 
-            <div className="bg-white shadow-lg rounded-lg p-6">
+            <div className="bg-white border border-[#e1e5df] rounded-lg p-6"> 
                 <form onSubmit={handleSubmit} className="space-y-6">
                     {error && <div className="p-3 rounded-md bg-red-50 text-red-700">{error}</div>}
                     {saveMessage && <div className="p-3 rounded-md bg-green-50 text-green-700">{saveMessage}</div>}
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">First Name</label>
+                            <label htmlFor="firstName" className="block text-sm font-medium text-[#616954]">First Name</label> 
                             <input
                                 type="text"
                                 name="firstName"
                                 id="firstName"
                                 value={formData.firstName}
                                 onChange={handleChange}
-                                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                                className="mt-1 block w-full px-3 py-2 border border-[#d1d7ce] rounded-md shadow-sm focus:outline-none focus:ring-[#B7BDA9] focus:border-[#B7BDA9]" 
                             />
                         </div>
                         <div>
-                            <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">Last Name</label>
+                            <label htmlFor="lastName" className="block text-sm font-medium text-[#616954]">Last Name</label> 
                             <input
                                 type="text"
                                 name="lastName"
                                 id="lastName"
                                 value={formData.lastName}
                                 onChange={handleChange}
-                                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                                className="mt-1 block w-full px-3 py-2 border border-[#d1d7ce] rounded-md shadow-sm focus:outline-none focus:ring-[#B7BDA9] focus:border-[#B7BDA9]" 
                             />
                         </div>
                     </div>
                     
                     <div>
-                        <label htmlFor="bio" className="block text-sm font-medium text-gray-700">Bio</label>
+                        <label htmlFor="bio" className="block text-sm font-medium text-[#616954]">Bio</label> 
                         <textarea
                             name="bio"
                             id="bio"
                             rows="4"
                             value={formData.bio}
                             onChange={handleChange}
-                            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 min-h-[120px]"
+                            className="mt-1 block w-full px-3 py-2 border border-[#d1d7ce] rounded-md shadow-sm focus:outline-none focus:ring-[#B7BDA9] focus:border-[#B7BDA9] min-h-[120px]" 
                         />
                     </div>
                     
                     <div>
-                        <label htmlFor="location" className="block text-sm font-medium text-gray-700">Location</label>
+                        <label htmlFor="location" className="block text-sm font-medium text-[#616954]">Location</label> 
                         <input
                             type="text"
                             name="location"
                             id="location"
                             value={formData.location}
                             onChange={handleChange}
-                            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                            className="mt-1 block w-full px-3 py-2 border border-[#d1d7ce] rounded-md shadow-sm focus:outline-none focus:ring-[#B7BDA9] focus:border-[#B7BDA9]" 
                         />
                     </div>
                     
                     <div>
-                        <label htmlFor="gitHubProfileUrl" className="block text-sm font-medium text-gray-700">GitHub URL</label>
+                        <label htmlFor="gitHubProfileUrl" className="block text-sm font-medium text-[#616954]">GitHub URL</label> 
                         <input
                             type="url"
                             name="gitHubProfileUrl"
                             id="gitHubProfileUrl"
                             value={formData.gitHubProfileUrl}
                             onChange={handleChange}
-                            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                            className="mt-1 block w-full px-3 py-2 border border-[#d1d7ce] rounded-md shadow-sm focus:outline-none focus:ring-[#B7BDA9] focus:border-[#B7BDA9]" 
                         />
                     </div>
 
                     <div>
-                        <label htmlFor="linkedInProfileUrl" className="block text-sm font-medium text-gray-700">LinkedIn URL</label>
+                        <label htmlFor="linkedInProfileUrl" className="block text-sm font-medium text-[#616954]">LinkedIn URL</label> 
                         <input
                             type="url"
                             name="linkedInProfileUrl"
                             id="linkedInProfileUrl"
                             value={formData.linkedInProfileUrl}
                             onChange={handleChange}
-                            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                            className="mt-1 block w-full px-3 py-2 border border-[#d1d7ce] rounded-md shadow-sm focus:outline-none focus:ring-[#B7BDA9] focus:border-[#B7BDA9]" 
                         />
                     </div>
 
@@ -178,13 +178,13 @@ const EditProfilePage = () => {
                         <button 
                             type="button" 
                             onClick={() => navigate('/profile/me')}
-                            className="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none"
+                            className="bg-white py-2 px-4 border border-[#d1d7ce] rounded-md shadow-sm text-sm font-medium text-[#616954] hover:bg-[#f8f9f7] focus:outline-none" 
                         >
                             Cancel
                         </button>
                         <button 
                             type="submit"
-                            className="bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700"
+                            className="bg-[#B7BDA9] text-[#454839] font-semibold px-5 py-2 rounded-lg hover:bg-[#9aa48c] transition-colors duration-300" 
                         >
                             Save Changes
                         </button>

@@ -44,16 +44,16 @@ const SkillGap = ({ careerId }) => {
         fetchSkillGap();
     }, [careerId, navigate]);
 
-    if (loading) return <div className="bg-white shadow-lg rounded-lg p-6 text-gray-600">Loading Skill Gap...</div>;
-    if (error) return <div className="bg-red-50 text-red-700 shadow-lg rounded-lg p-6">{error}</div>;
-    if (!analysis) return <div className="bg-white shadow-lg rounded-lg p-6 text-gray-600">No skill gap data.</div>;
+    if (loading) return <div className="bg-white border border-[#e1e5df] rounded-lg p-6 text-[#616954]">Loading Skill Gap...</div>;
+    if (error) return <div className="bg-red-50 text-red-700 border border-red-200 rounded-lg p-6">{error}</div>;
+    if (!analysis) return <div className="bg-white border border-[#e1e5df] rounded-lg p-6 text-[#616954]">No skill gap data.</div>;
 
     return (
-        <div className="bg-white shadow-lg rounded-lg p-6 sticky top-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-1">
+        <div className="bg-white border border-[#e1e5df] rounded-lg p-6 sticky top-6"> 
+            <h2 className="text-2xl font-bold text-[#454839] mb-1"> 
                 Skill Gap
             </h2>
-            <p className="text-lg text-blue-600 font-semibold mb-4">
+            <p className="text-lg text-[#7d8a70] font-semibold mb-4"> 
                 {analysis.careerTitle}
             </p>
             
@@ -61,9 +61,9 @@ const SkillGap = ({ careerId }) => {
                 {analysis.skills.map(skill => (
                     <li 
                         key={skill.skillName} 
-                        className="flex items-center justify-between p-3 bg-gray-50 rounded-md"
+                        className="flex items-center justify-between p-3 bg-[#f8f9f7] rounded-md" 
                     >
-                        <span className="font-medium text-gray-800">{skill.skillName}</span>
+                        <span className="font-medium text-[#454839]">{skill.skillName}</span> 
                         {skill.hasSkill ? (
                             <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-800">
                                 Have

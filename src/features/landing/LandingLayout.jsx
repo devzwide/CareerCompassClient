@@ -2,20 +2,24 @@ import { Outlet, Link } from "react-router-dom";
 
 const LandingLayout = () => {
     return (
-        <div className="min-h-screen flex flex-col font-sans">
-            {/* HEADER 
-              Contains the logo, app name, and auth buttons.
+        // Set the base text color for the whole page
+        <div className="min-h-screen flex flex-col font-sans text-[#454839]">
+            
+            {/* HEADER
+              - Swapped shadow for a subtle sage border
+              - Updated all text and button colors to the Sage palette
             */}
-            <header className="bg-white shadow-sm border-b border-gray-200">
+            <header className="bg-white border-b border-[#e1e5df]"> {/* sage-200 border */}
                 <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
+                    
                     {/* Logo and App Name */}
                     <Link to="/" className="flex items-center gap-3">
                         <img 
                             src="/compass.svg" 
                             alt="Career Compass Logo" 
-                            className="h-8 w-8" // You can adjust the size
+                            className="h-8 w-8"
                         />
-                        <span className="text-xl font-bold text-gray-800">
+                        <span className="text-xl font-bold text-[#454839]"> {/* sage-900 */}
                             Career Compass
                         </span>
                     </Link>
@@ -24,13 +28,14 @@ const LandingLayout = () => {
                     <div className="flex items-center gap-4">
                         <Link 
                             to="/auth/login" 
-                            className="text-gray-600 font-medium hover:text-blue-600"
+                            className="text-[#616954] font-medium hover:text-[#454839] transition-colors duration-300" /* sage-800 hover:sage-900 */
                         >
                             Log In
                         </Link>
                         <Link 
                             to="/auth/signup" 
-                            className="bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                            // Primary "Sage" button
+                            className="bg-[#B7BDA9] text-[#454839] font-semibold px-5 py-2 rounded-lg hover:bg-[#9aa48c] transition-colors duration-300" /* sage-500 bg, sage-900 text, hover:sage-600 */
                         >
                             Sign Up
                         </Link>
@@ -38,18 +43,16 @@ const LandingLayout = () => {
                 </nav>
             </header>
 
-            {/* MAIN CONTENT
-              This is where your 'Home.jsx' page will be rendered.
-            */}
+            {/* MAIN CONTENT */}
             <main className="flex-grow">
                 <Outlet />
             </main>
 
             {/* FOOTER
-              Simple copyright footer.
+              - Updated to use subtle Sage background and text colors
             */}
-            <footer className="bg-gray-50 border-t border-gray-200">
-                <div className="container mx-auto px-4 py-6 text-center text-gray-500">
+            <footer className="bg-[#f8f9f7] border-t border-[#e1e5df]"> {/* sage-50 bg, sage-200 border */}
+                <div className="container mx-auto px-4 py-6 text-center text-[#7d8a70]"> {/* sage-700 text */}
                     &copy; 2025 Career Compass. All rights reserved.
                 </div>
             </footer>
