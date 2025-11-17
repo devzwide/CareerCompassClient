@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 const Home = () => {
     return (
         <div>
-            {/* HERO SECTION
-              The main "above the fold" content.
-            */}
             <section className="bg-white">
                 <div className="container mx-auto px-4 py-24 md:py-32 text-center">
                     <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
@@ -25,9 +22,6 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* FEATURES SECTION
-              Highlights the 3 core features of your app.
-            */}
             <section className="bg-gray-50">
                 <div className="container mx-auto px-4 py-20">
                     <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
@@ -46,7 +40,6 @@ const Home = () => {
                             </p>
                         </div>
                         
-                        {/* Feature 2: Skill Gap */}
                         <div className="bg-white p-6 rounded-lg shadow-lg">
                             <h3 className="text-2xl font-semibold text-blue-600 mb-3">
                                 Skill Gap Analysis
@@ -57,7 +50,6 @@ const Home = () => {
                             </p>
                         </div>
 
-                        {/* Feature 3: Roadmaps */}
                         <div className="bg-white p-6 rounded-lg shadow-lg">
                             <h3 className="text-2xl font-semibold text-blue-600 mb-3">
                                 Personalized Roadmaps
